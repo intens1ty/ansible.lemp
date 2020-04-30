@@ -33,3 +33,4 @@ Default values:
 ```
 ansible-playbook -i inventory/hosts.ini -l my_host --extra-var "domain_name=example.local" playbook.yml
 ```
+
