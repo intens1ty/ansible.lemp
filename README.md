@@ -4,7 +4,7 @@
 * Centos 7
 
 ## Functional
-* Install Nginx, crete virtual host (domain name must be specified in ansible extra vars).
+* Install Nginx, create virtual host (domain name must be specified in ansible extra vars).
 * Install PHP, and other php packages such as php-fpm.
 * Install mysql (percona-release)
 
