@@ -1,0 +1,17 @@
+---
+- name: Install repository
+  yum:
+    name: "{{ item }}"
+  with_items: "{{ repository }}" 
+
+- name: Install php
+  yum:
+    name: "{{ item }}"
+  with_items: "{{ packages }}"
+
+- name: Start service
+  service:
+    name: php{{ php_version }}-php-fpm
+    state: started
+    enabled: yes
+      

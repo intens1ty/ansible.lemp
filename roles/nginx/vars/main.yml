@@ -1,0 +1,10 @@
+---
+#domain_name: example.local
+
+repository_redhat:
+  - epel-release
+
+packages_redhat:
+  - nginx
+
+

@@ -1,0 +1,22 @@
+---
+- name: Check OS
+  debug: var=ansible_os_family
+
+- block:
+  - name: Install epel-release
+    yum:
+      name: "{{ item }}"
+    with_items: "{{ repository_redhat }}"
+  
+  - name: Install nginx
+    yum:
+      name: "{{ item }}"
+    with_items: "{{ packages_redhat }}"
+
+  - name: Start nginx
+    service:
+      name: nginx
+      state: started
+      enabled: yes 
+
+  when: ansible_os_family == "RedHat"

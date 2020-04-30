@@ -1,0 +1,11 @@
+---
+- name: Configuration fpm pool
+  template:
+    src: templates/www.conf.j2
+    dest: /etc/opt/remi/php{{ php_version }}/php-fpm.d/www.conf
+  notify: restart fpm
+
+- name: Add file
+  copy:
+    src: files/info.php
+    dest: /var/www/{{ domain_name }}

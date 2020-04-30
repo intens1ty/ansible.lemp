@@ -1,0 +1,13 @@
+---
+repository:
+  - http://rpms.remirepo.net/enterprise/remi-release-7.rpm
+
+php_version: 74
+
+packages:
+  - php{{ php_version }}
+  - php{{ php_version }}-php-cli
+  - php{{ php_version }}-php-common
+  - php{{ php_version }}-php-fpm
+  - php{{ php_version }}-php-mysqlnd
+  

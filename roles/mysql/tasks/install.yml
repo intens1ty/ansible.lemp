@@ -1,0 +1,16 @@
+---
+- name: Install repository
+  yum:
+    name: "{{ item }}"
+  with_items: "{{ repository }}"
+
+- name: Install mysql
+  yum:
+    name: "{{ item }}"
+  with_items: "{{ packages }}"
+
+- name: Start mysql
+  service:
+    name: mysql
+    state: started
+    enabled: yes

@@ -1,0 +1,9 @@
+---
+repository: https://repo.percona.com/yum/percona-release-latest.noarch.rpm
+
+mysql_version: 57
+
+packages:
+  - Percona-Server-client-{{ mysql_version }}
+  - Percona-Server-server-{{ mysql_version }}
+  

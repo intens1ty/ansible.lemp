@@ -1,0 +1,13 @@
+---
+- name: Create a directory 
+  file:
+    path: /var/www/{{ item }}
+    state: directory
+    mode: '0755'
+  with_items: "{{ domain_name }}"
+
+- name: Copy config
+  template:
+    src: templates/vhost.conf.j2
+    dest: /etc/nginx/conf.d/vhost.conf
+  notify: restart nginx
