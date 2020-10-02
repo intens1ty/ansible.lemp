@@ -1,4 +1,4 @@
-# Ansible for install Nginx, PHP, MySQL
+#   Ansible for install Nginx, PHP, MySQL
 
 ## Supported OS
 * Centos 7
